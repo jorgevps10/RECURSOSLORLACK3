@@ -17,22 +17,31 @@ echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
 
 case $option in 
 
-      1)
-         clear
-         bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MINIINSTALADORUDP)
-         tput civis
-         echo -ne "\n\033[1;37m      ►► PRESIONE ENTER PARA CONTINUAR ◄◄\033[0m"; read 
-         tput cnorm
-         clear
-         menuprotocolosv2 ;;
-      2)
-         clear
-         bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/USERV2RAY-GRUPOVIP)
-         clear
-         menuprotocolosv2 ;;
-      0) 
-        clear 
-        exit ;;
+      1) 
+      clear
+      paneludp ;;
+      2) 
+      clear
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/PANELPSIPHONv1) 
+      ;;
+      3) 
+      clear
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/PANELPSIPHONv2) ;;
+      4)
+      clear
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MENUADMWS-EPRO) ;;
+      5)
+      clear
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MULTIINSTALADORDEPROTOCOLOS) ;;
+      6)
+      clear
+      bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MENUADMV2RAY) ;;
+      0)
+      echo -e "\033[1;31mSALIENDO...\033[0m"
+      sleep 2
+      clear
+      return
+      ;;
       *)
       echo -e "\n\033[1;31mOPCION INVALIDA !\033[0m"
       menuprotocolosv2
