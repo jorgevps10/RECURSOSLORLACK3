@@ -35,6 +35,7 @@ case $option in
         exit ;;
       *)
       echo -e "\n\033[1;31mOPCION INVALIDA !\033[0m"
+      menuprotocolosv2
       sleep 2
 esac
 }
