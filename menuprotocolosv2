@@ -1,13 +1,16 @@
 #!/bin/bash
-#!/bin/bash
 #MENU DE PROTOCOLOS V2
 clear
 menuprotocolosv2 () {
 echo -e "\033[0;31m==================================================\033[0m"
 echo -e "\E[44;1;37m            MENU DE PROTOCOLOS V2            \E[0m"
 echo -e "\033[0;31m==================================================\033[0m"
-echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMINI INSTALADOR >>UDP CUSTOM<<"
-echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mGESTOR V2RAY"
+echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>UDP CUSTOM<<"
+echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>PSIPHON v1<<"
+echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>PSIPHON v2<<"
+echo -e "\033[1;31m[\033[1;36m4\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>WS-EPRO<<"
+echo -e "\033[1;31m[\033[1;36m5\033[1;31m] \033[1;37m• \033[1;33mMULTIINSTALADOR DE PROTOCOLOS v2"
+echo -e "\033[1;31m[\033[1;36m6\033[1;31m] \033[1;37m• \033[1;33mMENU ADM >>V2RAY v2<<"
 echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[1;41mVOLVER"
 echo -e "\033[0;31m==================================================\033[0m"
 echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
