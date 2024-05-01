@@ -1,0 +1,37 @@
+#!/bin/bash
+#MENU DE PROTOCOLOS V2
+clear
+menuprotocolosv2 () {
+echo -e "\033[0;31m==================================================\033[0m"
+echo -e "\E[44;1;37m            MENU DE PROTOCOLOS V2            \E[0m"
+echo -e "\033[0;31m==================================================\033[0m"
+echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMINI INSTALADOR >>UDP CUSTOM<<"
+echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mGESTOR V2RAY"
+echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[1;41mVOLVER"
+echo -e "\033[0;31m==================================================\033[0m"
+echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
+
+case $option in 
+
+      1)
+         clear
+         bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MINIINSTALADORUDP)
+         tput civis
+         echo -ne "\n\033[1;37m      ►► PRESIONE ENTER PARA CONTINUAR ◄◄\033[0m"; read 
+         tput cnorm
+         clear
+         menuprotocolosv2 ;;
+      2)
+         clear
+         bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/USERV2RAY-GRUPOVIP)
+         clear
+         menuprotocolosv2 ;;
+      0) 
+        clear 
+        exit ;;
+      *)
+      echo -e "\n\033[1;31mOPCION INVALIDA !\033[0m"
+      sleep 2
+esac
+}
+menuprotocolosv2
