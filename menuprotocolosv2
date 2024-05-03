@@ -39,7 +39,6 @@ case $option in
       0)
       echo -e "\033[1;31mSALIENDO...\033[0m"
       sleep 2
-      clear
       return
       ;;
       *)
