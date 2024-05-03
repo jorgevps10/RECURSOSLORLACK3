@@ -1,0 +1,53 @@
+#!/bin/bash
+#PANEL UDP
+clear
+paneludp () {
+echo -e "\033[0;31m==================================================\033[0m"
+echo -e "\E[44;1;37m            MENU DE PROTOCOLOS V2            \E[0m"
+echo -e "\033[0;31m==================================================\033[0m"
+echo -e "\033[1;31m[\033[1;36m1\033[1;31m] \033[1;37m• \033[1;33mMENU INSTALAR >>UDP CUSTOM<<"
+echo -e "\033[1;31m[\033[1;36m2\033[1;31m] \033[1;37m• \033[1;33mACCEDER AL PANEL"
+echo -e "\033[1;31m[\033[1;36m3\033[1;31m] \033[1;37m• \033[1;33mDESINSTALAR UDP"
+echo -e "\033[1;31m[\033[1;36m0\033[1;31m] \033[1;37m• \e[97m\033[1;41mVOLVER"
+echo -e "\033[0;31m==================================================\033[0m"
+echo -ne "\033[1;32m┗━┫ INGRESE UNA OPCION: \033[1;37m "; read option
+
+case $option in 
+
+      1)
+         clear
+         bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/innstaladorudpprueba2.bin)
+         tput civis
+         echo -ne "\n\033[1;37m      ►► PRESIONE ENTER PARA CONTINUAR ◄◄\033[0m"; read 
+         tput cnorm
+         clear
+         paneludp ;;
+      2) udp ;;
+      3) tput clear 
+         msg -bar
+         read -rp " $(msg -ama "${a33:-DESEA CONTINUAR CON LA DESINSTALACION? [Y/n]}:") " -e -i Y UNINS
+         msg -bar
+         [[ $UNINS != @(Y|y|S|s) ]] && return
+         systemctl stop udp-custom &>/dev/null
+         systemctl disable udp-custom &>/dev/null
+         rm -rf /etc/systemd/system/udp-custom.service
+         rm -rf /usr/bin/udp-custom
+         rm -rf /root/udp/udp-custom
+         rm -rf /root/udp/config.json
+         rm -rf /etc/UDPCustom/udp-custom
+         rm -rf /usr/bin/udpgw
+         rm -rf /etc/systemd/system/udpgw.service
+         systemctl stop udpgw &>/dev/null 
+         rm -rf /usr/bin/udp
+         $bar
+         echo -ne "Enter Para Continuar" && read enter 
+         paneludp ;;  
+      0) 
+        clear 
+        bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/RECURSOSLORLACK3/main/menuprotocolosv2) ;;
+      *)
+      echo -e "\n\033[1;31mOPCION INVALIDA !\033[0m"
+      sleep 2
+esac
+}
+paneludp
