@@ -37,8 +37,9 @@ case $option in
       clear
       bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/MENUADMV2RAY) ;;
       0)
-      echo -e "\033[1;31mSALIENDO...\033[0m"
+      #echo -e "\033[1;31mSALIENDO...\033[0m"
       sleep 2
+      echo -e "\033[0;31m==================================================\033[0m"
       return
       ;;
       *)
