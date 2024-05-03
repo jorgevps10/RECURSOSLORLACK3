@@ -19,7 +19,7 @@ case $option in
 
       1) 
       clear
-      paneludp ;;
+      bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/RECURSOSLORLACK3/main/paneludp) ;;
       2) 
       clear
       bash <(curl -sL https://raw.githubusercontent.com/gitter75/HERRAMIENTAS/main/HERRAMIENTAS/PANELPSIPHONv1) 
